@@ -1,0 +1,101 @@
+id,Name,Count
+1,Other,1
+2,Smoked Beer,1
+3,Kristalweizen,1
+4,Flanders Red Ale,1
+5,Wheat Ale,1
+6,American Malt Liquor,1
+7,Grisette,1
+8,Flanders Oud Bruin,1
+9,Braggot,1
+10,Low Alcohol Beer,1
+11,Euro Pale Lager,2
+12,Rauchbier,2
+13,Abbey Single Ale,2
+14,Roggenbier,2
+15,English Stout,2
+16,Old Ale,2
+17,American Double / Imperial Pilsner,2
+18,American Barleywine,3
+19,English Barleywine,3
+20,Radler,3
+21,English Pale Mild Ale,3
+22,Keller Bier / Zwickel Bier,3
+23,American India Pale Lager,3
+24,Shandy,3
+25,English Bitter,3
+26,Chile Beer,3
+27,English Strong Ale,4
+28,Munich Dunkel Lager,4
+29,Dunkelweizen,4
+30,Quadrupel (Quad),4
+31,Euro Dark Lager,5
+32,Mead,5
+33,Irish Dry Stout,5
+34,Dubbel,5
+35,Maibock / Helles Bock,5
+36,N/A,5
+37,Baltic Porter,6
+38,Belgian Strong Dark Ale,6
+39,American Wild Ale,6
+40,California Common / Steam Beer,6
+41,Foreign / Export Stout,6
+42,Dortmunder / Export Lager,6
+43,English Dark Mild Ale,6
+44,Bock,7
+45,Bière de Garde,7
+46,Doppelbock,7
+47,Belgian Strong Pale Ale,7
+48,American Dark Wheat Ale,7
+49,American Double / Imperial Stout,9
+50,Schwarzbier,9
+51,Herbed / Spiced Beer,9
+52,Milk / Sweet Stout,10
+53,Gose,10
+54,Tripel,11
+55,Belgian Dark Ale,11
+56,Berliner Weissbier,11
+57,American White IPA,11
+58,Russian Imperial Stout,11
+59,English Pale Ale,12
+60,Irish Red Ale,12
+61,Light Lager,12
+62,Altbier,13
+63,English India Pale Ale (IPA),13
+64,American Strong Ale,14
+65,Winter Warmer,15
+66,Scotch Ale / Wee Heavy,15
+67,Oatmeal Stout,18
+68,Belgian IPA,18
+69,English Brown Ale,18
+70,Rye Beer,18
+71,American Adjunct Lager,18
+72,Scottish Ale,19
+73,Vienna Lager,20
+74,Munich Helles Lager,20
+75,Extra Special / Strong Bitter (ESB),20
+76,Pumpkin Ale,23
+77,Belgian Pale Ale,24
+78,American Pilsner,25
+79,Czech Pilsener,28
+80,American Amber / Red Lager,29
+81,Cream Ale,29
+82,Märzen / Oktoberfest,30
+83,American Black Ale,36
+84,German Pilsener,36
+85,Cider,37
+86,American Pale Lager,39
+87,American Stout,39
+88,Hefeweizen,40
+89,Kölsch,42
+90,Fruit / Vegetable Beer,49
+91,Witbier,51
+92,Saison / Farmhouse Ale,52
+93,American Porter,68
+94,American Brown Ale,70
+95,American Pale Wheat Ale,97
+96,American Double / Imperial IPA,105
+97,American Blonde Ale,108
+98,American Amber / Red Ale,133
+99,American Pale Ale (APA),245
+100,American IPA,424

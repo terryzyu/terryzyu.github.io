@@ -1,0 +1,143 @@
+
+
+<!doctype html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link rel="stylesheet" type="text/css" href="css/map.css" />
+		<link rel="stylesheet" type="text/css" href="css/betterBarChart.css" />
+		<link rel="stylesheet" type="text/css" href="css/jquery.fullpage.css" />
+		<link rel="stylesheet" type="text/css" href="css/bubbleplot.css" />
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
+		<script src="js/jquery.fullpage.extensions.min.js"></script> 
+		<script src="//d3js.org/topojson.v1.min.js"></script>
+		<!-- Need both d3 v3 and v4. In order to use v4 we have to modify the source slightly. All v4 references prefix with d3v4.method -->
+		<script src="//d3js.org/d3.v3.min.js"></script>
+		<script src="js/d3.v4.min.js"></script>
+		<!-- Create anchors for fullpage to navigate -->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$('#fullpage').fullpage({
+					verticalCentered: false,
+					anchors: ['splash', 'intro', 'usmap', 'findings', 'citations']
+				});
+				$('html').addClass(ENABLED);
+			windowsHeight = $window.height();
+			});
+		</script>
+	</head>
+	<body>
+		<div id="fullpage">
+			<!-- Splash page. Contains title and personal details -->
+			<div class = "section" style = " background-image: url('../imgs/beerList.png'); background-size: cover; background-repeat: no-repeat;">
+				<div class = "container">
+					<div class="row">
+						<div class="col-sm-offset-1 col-sm-6">
+							<div id="splashSection">
+								<h1 style = "color:pink"><u>Beers Across The US</u></h1>
+							</div>
+							<p style="width:300px; color:pink">A D3 Narritive Visual by Terry Yu<br>CS 416: Data Visualization</p>
+							<br>
+							<p style = "color:pink">Scroll down for more!</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- About data and bubble plot -->
+			<div class = "section" style = " background-image: url('../imgs/barCounter.png'); background-size: cover; background-repeat: no-repeat;">
+				<br>
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-5">
+							<div id="introSection">
+								<h2 style = "color:pink; text-decoration: underline">
+									Now is a great time to drink beer!
+								</h2>
+								<p style="width:500px; color:pink; font-weight: bold;">Beer has been around since the beginning of civilization. It has survived the test of time and become integral to many cultures. In the aftermath of the COVID-19 pandemic breweries have faced a difficult time recovering.The goal of this project is to highlight the different kinds of beers offered in each state! Navigate around and discover a brewery near you!</p>
+								<h3 style="; color:pink; text-decoration: underline">Data Overview</h3>
+								<p style="width:500px; color:pink; font-weight: bold;">The dataset is provided on Kaggle by Jean-NicholasHould. Inside we find 2,000+ canned beers from 500+ breweries in the United States. The main addition to this dataset is the coordinates of the breweries. Using Python alongside Geopy and Nominatim I was able to find all coordinates for each of the breweries. Some false positives were corrected (e.g. did not produce a coodinate within the US) leading to this dataset containing beers, breweries, and their locations.</p>
+								<h3 style = "color:pink; text-decoration: underline">
+									Bubble Chart
+								</h3>
+								<p style="width:500px; color:pink; font-weight: bold;">Bring your cursor on the bubbles on the right! Each circle represents a tally of the 100 different style beers along with their count. Hovering over them will bring the count and the beer's name!</p>
+							</div>
+						</div>
+						<div class="col-sm-7">
+							<div id = "bubblePlot">
+								<script type="text/javascript" src="js/bubbleplot.js"></script>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- US Map and bar chart -->
+			<div class = "section" style = " background-image: url('../imgs/woodbackgroundcopy.jpg');background-size: cover; background-repeat: no-repeat;">
+				<div class="container">
+					<div class="row">
+						<h2 style="color:pink">Click/Pan around and see the top 5 beers of the state!</h2>
+						<p style="color:pink">(if there are fewer than 5 then it's because the state only has those beers)</p>
+						<div class="col-sm-2">
+							<div id = "map">
+								<script type="text/javascript" src="js/zoommap.js"></script>
+							</div>
+						</div>
+						<div class="col-sm-offset-6 col-sm-2">
+							<div id = "betterBarChart">
+								<script type="text/javascript" src="js/betterBarChart.js"></script>
+							</div>
+						</div>
+					</div>
+					<h3 style="color:pink">Hover over a dot to see name of the brewery!</h3>
+					<p style="color:pink">(if there are no dots try refreshing)</p>
+				</div>
+			</div>
+			<!-- Findings -->
+			<div class = "section" style = " background-image: url('../imgs/singlebeer.jpg');background-size: cover; background-repeat: no-repeat;">
+				<br>
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-5">
+							<div id="findingssection">
+								<h2 style = "color:pink; text-decoration: underline">
+								<u>Findings</u></h1>
+								<p style="width:500px; color:pink; font-weight: bold;">The most popular beer is the American IPA and Colorado is the state with the most breweries, 47 of them! The beer scene is sparse in Nevada and West Virginia, possibly due to local laws. A large amount of breweries appear to be condensed where New York and New Jersey connect, potentially a great area to hit many places during a weekend.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Citations -->
+			<div class="section" style = " background-image: url('../imgs/beerpourbig2.jpg');background-size: cover; background-repeat: no-repeat;">
+				<br>
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-5">
+							<div id="citationssection">
+								<h1 style = "color:pink; text-decoration: underline">
+									<u>Citations</u>
+								</h1>
+								<h3 style = "color:pink; text-decoration: underline"><u>References</u></h3>
+								<p><a href = "https://github.com/alvarotrigo/fullPage.js" target="_blank">Full Page by alvarotrigo, for slideshow navigation</a></p>
+								<p><a href = "https://bl.ocks.org/mbostock/4699541" target="_blank">Zoom to Bounding Box by Mike Bostock, for US Map base</a></p>
+								<p><a href = "https://bl.ocks.org/guypursey/f47d8cd11a8ff24854305505dbbd8c07" target="_blank">Wrapping long labels with D3 v4 by Guy Pursey, for wrapping long labels on bar graph</a></p>
+								<p><a href = "https://www.d3-graph-gallery.com/graph/bubble_tooltip.html" target="_blank">Add tooltip to bubble chart by d3 graph gallery, for helping to add tooltips</a></p>
+								<h3 style = "color:pink; text-decoration: underline"><u>Stock Images (in order of appearance)</u></h3>
+								<p><a href = "https://www.istockphoto.com/photo/draught-beer-in-glasses-gm1040303026-278498732" target="_blank">Draught beer in glasses stock photo, #splash</a></p>
+								<p><a href = "https://www.istockphoto.com/photo/empty-dark-wooden-table-in-front-of-abstract-blurred-bokeh-background-of-restaurant-gm1130714046-299138231" target="_blank">Empty dark wooden table in front of abstract blurred bokeh background of restaurant, #intro</a></p>
+								<p><a href = "https://anupghosal.com/the-modern-rules-of-wood-background-wallpaper-wood-background-wallpaper/rustic-wood-wallpapers-high-resolution-white-grain-10x10-wood-wood-background-wallpaper/" target="_blank">Rustic Wood Wallpapers High Resolution White Grain 10×10 Wood, #usmap</a></p>
+								<p><a href = "https://wallpapercave.com/w/wp2685294" target="_blank">(No name), #findings</a></p>
+								<p><a href = "https://unsplash.com/photos/VJXLzQi5TlE" target="_blank">(No name) by Amie Johnson, #citations</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+
